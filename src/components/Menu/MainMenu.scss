@@ -1,0 +1,43 @@
+$desk: 990px;
+@mixin desk {
+  @media (max-width: #{$desk}) {
+    @content;
+  }
+}
+
+.menu-area {
+  NavLink {
+    color: #ffffff;
+  }
+  li.nav-item a.nav-link {
+    color: #fff !important;
+    margin-right: 22px;
+    font-size: 16px;
+    padding: 5px 2px;
+
+    @include desk {
+      margin-right: 9px;
+      font-size: 14px;
+    }
+  }
+
+  nav.navbar.navbar-expand-md.navbar-light {
+    padding: 0;
+    margin-top: 18px;
+  }
+
+  .navbar-brand {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-brand img {
+    width: 100%;
+  }
+  .btn-sign-in {
+    color: #2b62c9;
+    background: #fff;
+    padding: 5px 18px;
+    margin: 20px 0 0 -20px;
+  }
+}

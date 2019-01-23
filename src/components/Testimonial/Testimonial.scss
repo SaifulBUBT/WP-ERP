@@ -1,0 +1,52 @@
+.single-testimonial {
+  border: 1px solid #eaefe5;
+  border-radius: 5px;
+  transition: all 0.3s;
+  p {
+    position: relative;
+    color: #8a8a8a;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    line-height: 24px;
+    text-align: left;
+    margin: 20px 0 30px;
+  }
+  p::before {
+    position: absolute;
+    content: "";
+    width: 47px;
+    height: 36px;
+    background: url("../../img/quote-1.png");
+    background-repeat: no-repeat;
+    top: -45px;
+    left: 5px;
+  }
+  p::after {
+    position: absolute;
+    content: "";
+    width: 47px;
+    height: 36px;
+    background: url("../../img/quote-2.png");
+    background-repeat: no-repeat;
+    bottom: -27px;
+    right: 0;
+  }
+  .test-name {
+    color: #616161;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+  }
+  .test-designation {
+    color: #2b62c9;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+  }
+}
+.single-testimonial:hover {
+  -webkit-box-shadow: -1px 4px 53px -18px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 4px 53px -18px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 4px 53px -18px rgba(0, 0, 0, 0.75);
+}

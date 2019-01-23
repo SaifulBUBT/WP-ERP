@@ -1,0 +1,140 @@
+$desk: 990px;
+@mixin desk {
+  @media (max-width: #{$desk}) {
+    @content;
+  }
+}
+
+$tab: 768px;
+@mixin tab {
+  @media (max-width: #{$tab}) {
+    @content;
+  }
+}
+
+$mobile: 414px;
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+.banner-area {
+  width: 98%;
+  @include desk {
+    /* color: red; */
+    width: 100%;
+  }
+  @include tab {
+    width: 100%;
+  }
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 40px 0 70px 0;
+
+  .banner-content {
+    flex-basis: 44%;
+    flex-grow: 1;
+    padding: 0 0 0 5.4em;
+    @include mobile {
+      flex-basis: 100%;
+      padding: 0 20px 0;
+    }
+    @include tab {
+      padding: 0 0 0 1.4em;
+    }
+    p {
+      color: #a4e2ff;
+      margin-bottom: 2rem;
+      font-size: 18px;
+      @include mobile {
+        padding: 0 15px 0 0;
+      }
+    }
+    .button-area .download {
+      background: #14d6e8;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .button-area .demo {
+      background: #37b6ff;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 25px 0 18px;
+      @include tab {
+        margin: 0 5px;
+      }
+    }
+    .button-area .documentation {
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      position: relative;
+    }
+    button.btn.documentation:after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 74%;
+      background: #87cdfa;
+      top: 76%;
+      left: 19px;
+    }
+  }
+  .banner-img {
+    flex-basis: 54%;
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+  .banner-content h1 {
+    color: #fff;
+    font-size: 51px;
+    font-family: Lato;
+    font-weight: 900;
+    line-height: 60px;
+    margin-top: 133px;
+    margin-bottom: 0px;
+
+    @include desk {
+      /* color: red; */
+      margin-top: 0;
+      font-size: 36px;
+      line-height: 50px;
+    }
+
+    @include tab {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 46px;
+    }
+  }
+  .banner-content h4 {
+    margin-top: 28px;
+    margin-bottom: 24px;
+    color: #c0ebff;
+    font-size: 34px;
+    span {
+      color: #57ddff;
+    }
+    @include desk {
+      font-size: 24px;
+    }
+    @include tab {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 16px;
+      margin-bottom: 22px;
+    }
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+}

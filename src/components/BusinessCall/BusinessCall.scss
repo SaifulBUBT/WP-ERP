@@ -1,0 +1,59 @@
+$desk: 990px;
+@mixin desk {
+  @media (max-width: #{$desk}) {
+    @content;
+  }
+}
+
+$tab: 768px;
+@mixin tab {
+  @media (max-width: #{$tab}) {
+    @content;
+  }
+}
+
+$mobile: 414px;
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+/**font-family: 'Lato', sans-serif;**/
+.business-content {
+  padding: 43px 80px 41px 73px;
+  -webkit-box-shadow: -1px 1px 87px -1px rgba(219, 212, 219, 1);
+  -moz-box-shadow: -1px 1px 87px -1px rgba(219, 212, 219, 1);
+  box-shadow: -1px 1px 87px -1px rgba(219, 212, 219, 1);
+  background: #fff;
+  border-radius: 5px;
+  width: 72%;
+  margin: -34px auto 0;
+  display: flex;
+  @include desk {
+    /* color: red; */
+    width: 100%;
+  }
+  @include tab {
+    width: 100%;
+    padding: 37px 20px 26px 30px;
+  }
+  @include mobile {
+    width: 100%;
+    padding: 37px 20px 26px 30px;
+  }
+  p {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    color: #bec4c8;
+    margin: 14px 0 0 28px;
+    span {
+      color: #14bff9;
+    }
+    @include mobile {
+      font-size: 16px;
+      margin: 10px 0 0 15px;
+    }
+  }
+}

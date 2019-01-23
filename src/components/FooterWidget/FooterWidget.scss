@@ -1,0 +1,42 @@
+$desk: 990px;
+@mixin desk {
+  @media (max-width: #{$desk}) {
+    @content;
+  }
+}
+
+$tab: 768px;
+@mixin tab {
+  @media (max-width: #{$tab}) {
+    @content;
+  }
+}
+
+$mobile: 414px;
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+.single-footer-widget {
+  @include mobile {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h3 {
+    color: #1c1c1c;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .list-group {
+    .list-group-item {
+      border: 0px;
+      padding: 22px 0 0;
+      color: #657387;
+      font-size: 16px;
+      font-weight: 400;
+      font-family: "Lato", sans-serif;
+    }
+  }
+}

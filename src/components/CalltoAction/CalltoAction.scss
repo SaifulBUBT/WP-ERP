@@ -1,0 +1,71 @@
+$desk: 990px;
+@mixin desk {
+  @media (max-width: #{$desk}) {
+    @content;
+  }
+}
+
+$tab: 768px;
+@mixin tab {
+  @media (max-width: #{$tab}) {
+    @content;
+  }
+}
+
+$mobile: 414px;
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+.call-to-action-area {
+  position: relative;
+  img {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: -13%;
+    left: 47%;
+    @include mobile {
+      top: -11%;
+      left: 40%;
+    }
+  }
+  .call-to-action-bg {
+    position: absolute;
+    background: url("../../img/call-to-action-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .call-to-action-content {
+    position: relative;
+    padding-bottom: 105px;
+
+    img {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+    }
+    h1 {
+      font-size: 39px;
+      font-weight: 900;
+      font-family: "Lato", sans-serif;
+      color: #fff;
+      margin-top: 80px;
+    }
+    h3 {
+      color: #c0ebff;
+      font-size: 23px;
+      font-weight: 400;
+      font-family: "Lato", sans-serif;
+      margin: 10px 0 25px;
+      span {
+        color: #57ddff;
+      }
+    }
+  }
+}
